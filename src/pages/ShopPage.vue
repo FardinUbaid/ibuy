@@ -2,7 +2,7 @@
   <q-page class="shop-page q-pa-md bg-grey-1">
     <div class="text-h4 text-primary text-center q-mb-lg">Shop Products</div>
 
-    <!-- Skeletons always shown if loading or empty -->
+    <!-- Skeletons loading or empty -->
     <div v-if="loading || products.length === 0" class="row q-col-gutter-md q-pa-md">
       <div v-for="n in perPage" :key="n" class="col-xs-12 col-sm-6 col-md-4">
         <q-card>
@@ -17,7 +17,7 @@
         </q-card>
       </div>
 
-      <!-- Only show "No products" message when products array is empty and not loading -->
+      <!--No products -->
       <div
         v-if="!loading && products.length === 0"
         class="text-center q-pa-xl text-grey-7"
@@ -60,7 +60,7 @@
     </div>
 
     <!-- Product Drawer -->
-    <ProductDrawer v-model="drawerVisible" :product-id="selectedProductId" />
+    <ProductDrawer v-model="drawerVisible" :product-id.="selectedProductId" />
   </q-page>
 </template>
 

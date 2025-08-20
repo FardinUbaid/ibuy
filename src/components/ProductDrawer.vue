@@ -87,6 +87,6 @@ const reset = () => {
 
 <style scoped>
 .product-drawer {
-  max-height: 80vh; /* reduce height for now */
+  max-height: 80vh;
 }
 </style>
